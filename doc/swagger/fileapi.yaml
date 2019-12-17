@@ -761,6 +761,10 @@ paths:
           in: query
           description: whether or not to overwrite a currently existing file
           type: boolean
+        - name: recursive
+          in: query
+          description: whether or not all non-existed dirctories should be created. 
+          type: boolean
       consumes:
         - text/plain
       responses:
@@ -771,8 +775,8 @@ paths:
             properties:
               msg: 
                 type: string
-        '404':
-          description: file could not be opened or does not exist
+        '405':
+          description: Method not allowed 
           schema:
             type: object
             properties:
