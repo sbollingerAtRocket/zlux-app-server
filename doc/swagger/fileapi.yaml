@@ -754,7 +754,7 @@ paths:
       parameters:
         - name: directory
           in: path
-          description: the directory that should be created
+          description: the directory tree that should be created
           required: true
           type: string
         - name: forceOverwrite
